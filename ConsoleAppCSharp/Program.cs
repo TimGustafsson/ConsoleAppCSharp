@@ -7,24 +7,7 @@ namespace ConsoleAppCSharp
         static void Main(string[] args)
         {//Code block of Main method
 
-            Console.WriteLine("Hello World!");
-
-            //string userName = Console.ReadLine();
-            string userName = AskUserFor("your name");
-
-            Console.WriteLine("Hello " + userName);
-
-            //int userAge = Convert.ToInt32( AskUserFor("your age") );
-            int userAge = AskUserForNumber("your age");
-
-            if(userAge > 17)
-            {
-                Console.WriteLine("Do you want a Beer?");
-            }
-            else
-            {
-                Console.WriteLine("Do you want a Soda?");
-            }
+            //Console.WriteLine("Hello World!");
 
             bool keepLooping = true;
 
@@ -47,17 +30,25 @@ namespace ConsoleAppCSharp
                     case 2:
                         CodeLove();     
                         break;
+                    case 3:
+                        Greetuser();
+                        break;
+                    case 4:
+                        TheBar();
+                        break;
                     case 9:
                         keepLooping = false;
                         break;
                     default:
-                        Console.Write("Not a valid option.");
                         break;
                 }
 
-            }
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+                 
+            }//End of while loop
 
-
+             
         }//End of Main method
 
         static void PrintMenu()
@@ -65,6 +56,8 @@ namespace ConsoleAppCSharp
             Console.WriteLine("-----Meny-----");
             Console.WriteLine("1: Count down from 3");
             Console.WriteLine("2: Give me code love");
+            Console.WriteLine("3: Greet user");
+            Console.WriteLine("4: The bar");
             Console.WriteLine("9: Exit program");
         }
 
@@ -87,14 +80,38 @@ namespace ConsoleAppCSharp
 
         static void CodeLove()
         {
-            int amount = AskUserForNumber("how mush code love    do you need?");
+            int amount = AskUserForNumber("how mush code love do you need?");
 
             while (amount > 0)
             {
-                Console.Write("Code loves you!");
+                Console.WriteLine("Code loves you!");
                 amount--;
+            }
+        }
+
+        static void Greetuser()
+        {
+            //string userName = Console.ReadLine();
+            string userName = AskUserFor("your name");
+
+            Console.WriteLine("Hello " + userName);
+        }
+
+        static void TheBar()
+        {
+            //int userAge = Convert.ToInt32( AskUserFor("your age") );
+            int userAge = AskUserForNumber("your age");
+
+            if (userAge > 17)
+            {
+                Console.WriteLine("Do you want a Beer?");
+            }
+            else
+            {
+                Console.WriteLine("Do you want a Soda?");
             }
         }
 
     }//End of program class
 }//End of Namespace
+ 
