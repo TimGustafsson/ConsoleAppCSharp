@@ -12,6 +12,7 @@ namespace ConsoleAppCSharp
             bool keepLooping = true;
 
             while (keepLooping == true)
+
             {
                 Console.Clear();
 
@@ -19,7 +20,7 @@ namespace ConsoleAppCSharp
 
                 int userPick = AskUserForNumber("meny selection");
 
-                switch (userPick)
+                switch (userPick)   
                 {
                     case 1:
                         for(int i = 3; i > 0; i--)
@@ -53,7 +54,7 @@ namespace ConsoleAppCSharp
 
         static void PrintMenu()
         {
-            Console.WriteLine("-----Meny-----");
+            Console.WriteLine("----- Menu -----");
             Console.WriteLine("1: Count down from 3");
             Console.WriteLine("2: Give me code love");
             Console.WriteLine("3: Greet user");
